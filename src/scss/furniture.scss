@@ -1,0 +1,159 @@
+.furniture {
+    margin-top: 2.75rem;
+
+    @media screen and (max-width: $max-width) {
+        margin-top: min(2.75rem, 5.5vh);
+    }
+
+    &__container {
+        width: 100%;
+        overflow-x: hidden;
+        padding: min(2rem, 2vh) 0 min(2.75rem, 5.5vh);
+
+        @media screen and (any-hover: none) {
+            overflow-x: auto;
+        }
+    }
+
+    &__header {
+        text-align: center;
+
+        span {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 0.4em;
+        }
+    }
+
+    &__gallary {
+        width: fit-content;
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        gap: 1rem;
+
+        &>div {
+            display: flex;
+            gap: 1rem;
+
+            a:last-child {
+                flex: 1 1 100%;
+            }
+
+            img {
+                object-position: center;
+                object-fit: cover;
+            }
+        }
+
+        &_item:nth-child(1n) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        &_item:nth-child(2n) {
+            display: block;
+            align-self: center;
+
+            a img {
+                height: 24vmax;
+                aspect-ratio: 3/4;
+            }
+        }
+
+        &_item:nth-child(3n) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        &_item-left-top {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            gap: 1rem;
+
+            a:nth-child(1n) img {
+                height: 19vmax;
+                aspect-ratio: 4/3;
+            }
+
+            a:nth-child(2n) img {
+                height: 23vmax;
+                aspect-ratio: 3/4;
+            }
+
+            a:nth-child(3n) img {
+                height: 29vmax;
+                aspect-ratio: 3/4;
+            }
+        }
+
+        &_item-left-bottom {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            gap: 1rem;
+
+            a:nth-child(1n) img {
+                height: 16vmax;
+                aspect-ratio: 4/3;
+            }
+
+            a:nth-child(2n) img {
+                height: 20vmax;
+                aspect-ratio: 4/3;
+            }
+
+            a:last-child img {
+                width: 100%;
+            }
+        }
+
+        &_item-right-top {
+            display: flex;
+            align-items: flex-end;
+            gap: 1rem;
+
+            a:nth-child(1n) img {
+                height: 18vmax;
+                aspect-ratio: 3/4;
+            }
+
+            a:nth-child(2n) img {
+                height: 22vmax;
+                aspect-ratio: 4/3;
+            }
+        }
+
+        &_item-right-bottom {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+
+            a:nth-child(1n) img {
+                height: 12vmax;
+                aspect-ratio: 3/4;
+            }
+
+            a:nth-child(2n) img {
+                height: 12vmax;
+                aspect-ratio: 4/3;
+            }
+
+            a:nth-child(3n) img {
+                height: 16vmax;
+                aspect-ratio: 4/3;
+            }
+
+            a:last-child img {
+                width: 100%;
+            }
+        }
+    }
+
+}

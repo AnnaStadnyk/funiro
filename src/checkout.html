@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+'title': 'Funiro'
+})
+
+<body>
+    @@include('html/header.html', {})
+    <main class="page">
+        <div class="wrapper">
+            <div class="checkout">
+                <div class="cart">
+                    <h3>Your Order</h3>
+                    <div class="cart__header total__cart">
+                        <span>Product</span>
+                        <span>Subtotal</span>
+                    </div>
+                    <div class="cart__items">
+                    </div>
+                    <div class="cart__subtotal total__cart">
+                    </div>
+                    <div class="cart__shipping total__cart">
+                    </div>
+                    <div class="cart__total total__cart">
+                    </div>
+                    <div class="cart__buttons">
+                        <a href="#" class="btn">Place Order</a>
+                    </div>
+                    <div class="cart__discount">
+                        <p class="p-clickable">Have a coupon? Click here to enter your code</p>
+                        <!-- <a href="">Have a coupon? Click here to enter your code</a> -->
+                        <form action="" method="post" class="cart__discount__form">
+                            <input type="text" name="cart__discount" id="cart__discount" placeholder="Coupon code"
+                                class="input-field" autocomplete="off" maxlength="15">
+                            <input type="submit" value="Apply" class="submit-btn btn">
+                        </form>
+                    </div><!-- cart__discount -->
+                </div><!-- cart -->
+                <div class="checkout__info">
+                    <form action="" method="post" class="checkout__info__form">
+                        <h3 class="checkout__info-6">Billing Details</h3>
+                        <div class="checkout__info__form_detail checkout__info-6">
+                            <label for="email">
+                                Email address&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="email" name="email" id="email" required class="input-field" tabindex="1"
+                                autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-3">
+                            <label for="firstName">
+                                First name&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="firstName" id="firstName" maxlength="30" required
+                                class="input-field" tabindex="2" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-3">
+                            <label for="lastName">
+                                Last name&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="lastName" id="lastName" maxlength="30" required class="input-field"
+                                tabindex="3" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-6">
+                            <label for="streetAddress">
+                                Street address&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="streetAddress" id="streetAddress" maxlength="100"
+                                placeholder="House number and streen name" required class="input-field" tabindex="4"
+                                autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-2-3">
+                            <label for="city">
+                                Town / City&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <select name="city" id="city" required placeholder="" class="input-field" tabindex="5">
+                                <option value="value1">City 1</option>
+                                <option value="value2">City 2</option>
+                                <option value="value3">City 3</option>
+                                <option value="value4">City 4</option>
+                                <option value="value5">City 5</option>
+                                <option value="value6">City 6</option>
+                                <option value="value7">City 7</option>
+                                <option value="value8">City 8</option>
+                                <option value="value9">City 9</option>
+                            </select>
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-2-3">
+                            <label for="region">
+                                Region&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <select name="region" id="region" required placeholder="" class="input-field" tabindex="6">
+                                <option value="value1">Region 1</option>
+                                <option value="value2">Region 2</option>
+                                <option value="value3">Region 3</option>
+                            </select>
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-2-3">
+                            <label for="postcode">
+                                Postcode&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="postcode" id="postcode" maxlength="5" required class="input-field"
+                                tabindex="7" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-6">
+                            <label for="phone">
+                                Phone&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="tel" name="phone" id="phone" maxlength="12" required class="input-field"
+                                tabindex="8" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-6">
+                            <span class="_icon-cc-visa"></span>
+                            <span class="_icon-cc-mastercard"></span>
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-3">
+                            <label for="cardName">
+                                Name on Card&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="cardName" id="cardName" required maxlength="30" class="input-field"
+                                tabindex="11" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-3">
+                            <label for="cardNum">
+                                Credit card number&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="cardNum" id="cardNum" required maxlength="15" class="input-field"
+                                placeholder="1111-2222-3333-4444" pattern="^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                                tabindex="12" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-2">
+                            <label for="expMonth">
+                                Exp Month&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="expMonth" id="expMonth" required maxlength="2" class="input-field"
+                                placeholder="01" pattern="^[0-9]{2}$" tabindex="13" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-2">
+                            <label for="expYear">
+                                Exp Year&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="expYear" id="expYear" required maxlength="4" class="input-field"
+                                placeholder="2023" pattern="^[1-9][0-9]{3}$" tabindex="14" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-2">
+                            <label for="cvv">
+                                CVV&nbsp;<abbr title="required">*</abbr>
+                            </label>
+                            <input type="text" name="cvv" id="cvv" required maxlength="3" class="input-field"
+                                placeholder="123" pattern="^[0-9]{3}$" tabindex="15" autocomplete="off">
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-6">
+                            <span class="input__wrapper">
+                                <input type="checkbox" name="createAccount" id="createAccount" tabindex="9">
+                                <label for="createAccount" class="label-checkbox">Create an account</label></span>
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-6"><span class="input__wrapper">
+                                <input type="checkbox" name="agree" id="agree" checked required tabindex="10">
+                                <label for="agree" class="label-checkbox"><span>I accept the terms of the user
+                                        agreement&nbsp;<abbr title="required">*</abbr></span></label></span>
+                        </div>
+                        <div class="checkout__info__form_detail checkout__info-2-6">
+                            <input type="submit" value="Place Order" class="submit-btn btn">
+                        </div>
+                    </form>
+                </div><!-- checkout__info -->
+            </div><!-- checkout -->
+        </div><!-- wrapper -->
+    </main>
+    @@include('html/footer.html', {})
+
+    <script src="js/app.min.js"></script>
+
+</body>
+
+</html>

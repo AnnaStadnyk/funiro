@@ -1,0 +1,84 @@
+%ic {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icon-"],
+[class*=" _icon-"] {
+    &::before {
+        @extend %ic;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+ 
+._icon-person:before {
+  content: "\e90c";
+}
+._icon-user:before {
+  content: "\e90a";
+}
+._icon-arrow-down:before {
+  content: "\e900";
+}
+._icon-arrow-right:before {
+  content: "\e901";
+}
+._icon-cart:before {
+  content: "\e902";
+}
+._icon-favorite:before {
+  content: "\e903";
+}
+._icon-locate:before {
+  content: "\e904";
+}
+._icon-mail:before {
+  content: "\e905";
+}
+._icon-phone:before {
+  content: "\e906";
+}
+._icon-search:before {
+  content: "\e907";
+}
+._icon-share:before {
+  content: "\e908";
+}
+._icon-google_link:before {
+  content: "\e915";
+  color: #4285f4;
+}
+._icon-facebook_link:before {
+  content: "\e916";
+  color: #1877f2;
+}
+._icon-cc-visa:before {
+  content: "\e909";
+}
+._icon-cc-mastercard:before {
+  content: "\e912";
+}
+._icon-eye:before {
+  content: "\e9ce";
+}
+._icon-eye-blocked:before {
+  content: "\e9d1";
+}
+._icon-google:before {
+  content: "\ea88";
+}
+._icon-facebook:before {
+  content: "\ea90";
+}

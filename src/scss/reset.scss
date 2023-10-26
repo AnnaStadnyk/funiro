@@ -1,0 +1,73 @@
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	font: inherit;
+	color: inherit;
+}
+
+a,
+a:hover,
+a:visited {
+	text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+	color: inherit;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+// button {
+// 	cursor: pointer;
+// }
+
+:focus,
+:active {
+	outline: none;
+}
+
+i {
+	cursor: pointer;
+}
+
+::-ms-clear { display: none }
+// ::-webkit-search-cancel-button {
+//     -webkit-appearance: none;
+// }

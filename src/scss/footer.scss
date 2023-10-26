@@ -1,0 +1,169 @@
+.footer {
+    
+    a {
+        transition: all 0.3s ease;
+
+        @media screen and (any-hover: hover) {
+            &:hover {
+                color: $orange-1;
+            }
+        }
+
+        &:active {
+            color: $orange-1;
+        }
+    }
+
+    &__content {
+        padding: 5rem 0 3.125rem 0;
+        display: grid;
+        grid-template-columns: minmax(auto, 250px) 2fr minmax(auto, 290px);
+        gap: 5rem;
+        border-top: 1px solid $gray-4;
+
+        @media screen and (max-width: $max-width) {
+            padding: clamp(2.5rem, 1.7857rem + 3.5714vmin, 5rem) 0 clamp(1.5rem, 1.0357rem + 2.3214vmin, 3.125rem) 0;
+            gap: clamp(1.5rem, -2.5rem + 8.3333vw, 5rem);
+        }
+
+        @media screen and (max-width: 992px) {
+            grid-template-columns: 2fr minmax(290px, 1fr);
+            grid-template-rows: auto auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media screen and (min-width: 769px) and (max-width: 992px) {
+            grid-column: span 2;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        [class^="_icon-"] {
+            &::before {
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-around;
+        gap: 5rem;
+
+        @media screen and (max-width: $max-width) {
+            gap: clamp(1.5rem, -2.5rem + 8.3333vw, 5rem);
+        }
+
+        [class^="_icon-"] {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+
+            [class^="_icon-"] {
+                display: block;
+            }
+        }
+
+        &__wrapper {
+            @media screen and (max-width: 768px) {
+                flex: 1 1 100%;
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: grid-template-rows 0.3s ease;
+            }
+        }
+    }
+
+    &__menu,
+    &__account,
+    &__social {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media screen and (max-width: 992px) {
+            flex: 1 0 auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: unset;
+
+            h4 {
+                flex: 1 1 auto;
+                transition: all 0.3s ease;
+            }
+
+            [class^="_icon-"] {
+                transition: all 0.3s ease;
+            }
+
+            &._hover {
+                .footer__info__wrapper {
+                    grid-template-rows: 1fr;
+                }
+
+                h4 {
+                    color: $orange-1;
+                }
+
+                [class^="_icon-"] {
+                    transform: rotate(180deg);
+                    color: $orange-1;
+                }
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            overflow: hidden;
+
+            @media screen and (max-width: 768px) {
+                li:first-child {
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }
+
+    &__subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__form {
+            display: flex;
+            gap: 0.25rem;
+
+            input[type=email] {
+                flex: 1 0 auto;
+            }
+
+            button[type=submit] {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
