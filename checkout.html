@@ -60,7 +60,7 @@
                     </div>
                     <div class="account__items">
                         <div class="account__favorite">
-                            <a href="" class="_icon-favorite _icon"></a>
+                            <a href="" class="_icon-favourite _icon"></a>
                         </div>
                         <div class="account__cart">
                             <a href="" class="_icon-cart _icon"><span class="cart__count"></span></a>
@@ -91,6 +91,89 @@
             </div><!-- header__nav -->
         </div><!-- wrapper -->
     </div><!-- header__container -->
+
+    <div class="login__form__wrapper">
+            <div class="login__form__container">
+                <form action="" method="post" class="login__form signin__form">
+                    <div class="login__form__header">
+                        <h3>Signin</h3>
+                        <div class="login__form__close">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="login__form-detail">
+                        <label for="email">
+                            Email address&nbsp;<abbr title="required">*</abbr>
+                        </label>
+                        <input type="email" name="email" id="signin-email" class="input-field" autocomplete="off">
+                    </div>
+                    <div class="login__form-detail">
+                        <label for="password">
+                            Password&nbsp;<abbr title="required">*</abbr>
+                        </label>
+                        <input type="password" name="password" id="password" class="input-field">
+                        <span class="_icon _icon-eye-blocked"></span>
+                    </div>
+                    <div class="login__form-detail login__form-detail_2">
+                        <span class="input__wrapper">
+                            <input type="checkbox" name="rememberMe" id="rememberMe">
+                            <label for="rememberMe" class="label-checkbox">Remember Me</label>
+                        </span>
+                        <a href="" class="underline">Forgot password?</a>
+                    </div>
+                    <div class="login__form-detail">
+                        <input type="submit" value="Signin" class="submit-btn btn">
+                    </div>
+                    <div class="login__form-detail">
+                        <span>Don't have an account? <a href="" class="login__form__link underline">Signup</a></span>
+                    </div>
+                </form>
+                <form action="" method="post" class="login__form signup__form">
+                    <div class="login__form__header">
+                        <h3>Signup</h3>
+                        <div class="login__form__close">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="login__form-detail">
+                        <label for="email">
+                            Email address&nbsp;<abbr title="required">*</abbr>
+                        </label>
+                        <input type="email" name="email" id="signup-email" class="input-field" autocomplete="off">
+                    </div>
+                    <div class="login__form-detail">
+                        <label for="password">
+                            Password&nbsp;<abbr title="required">*</abbr>
+                        </label>
+                        <input type="password" name="password" id="signup-password" class="input-field">
+                        <span class="_icon _icon-eye-blocked"></span>
+                    </div>
+                    <div class="login__form-detail">
+                        <label for="password-confirm">
+                            Confirm password&nbsp;<abbr title="required">*</abbr>
+                        </label>
+                        <input type="password" name="password-confirm" id="password-confirm" class="input-field">
+                        <span class="_icon _icon-eye-blocked"></span>
+                    </div>
+                    <div class="login__form-detail login__form-detail_2">
+                        <span class="input__wrapper">
+                            <input type="checkbox" name="rememberMe" id="signup__rememberMe">
+                            <label for="rememberMe" class="label-checkbox">Remember Me</label>
+                        </span>
+                    </div>
+                    <div class="login__form-detail">
+                        <input type="submit" value="Signup" class="submit-btn btn">
+                    </div>
+                    <div class="login__form-detail">
+                        <span>Already have an account? <a href="" class="login__form__link underline">Login</a></span>
+                    </div>
+                </form>
+                <div class="login__social">
+                    <a href="" class="login__social__link"><span class="_icon-facebook"></span>Login with Facebook</a>
+                    <a href="" class="login__social__link"><span class="_icon-google"></span>Login with Google</a>
+                </div>
+            </div>
+        </div>
 </header>
     <main class="page">
         <div class="wrapper">
@@ -107,20 +190,20 @@
                     </div>
                     <div class="cart__shipping total__cart">
                     </div>
-                    <div class="cart__total total__cart">
-                    </div>
-                    <div class="cart__buttons">
-                        <a href="#" class="btn">Place Order</a>
-                    </div>
                     <div class="cart__discount">
-                        <p class="p-clickable">Have a coupon? Click here to enter your code</p>
+                        <p class="subtitle">Have a coupon? Click here to enter your code</p>
                         <!-- <a href="">Have a coupon? Click here to enter your code</a> -->
                         <form action="" method="post" class="cart__discount__form">
                             <input type="text" name="cart__discount" id="cart__discount" placeholder="Coupon code"
                                 class="input-field" autocomplete="off" maxlength="15">
                             <input type="submit" value="Apply" class="submit-btn btn">
                         </form>
-                    </div><!-- cart__discount -->
+                    </div>
+                    <div class="cart__total total__cart">
+                    </div>
+                    <div class="cart__buttons">
+                        <a href="#" class="btn">Place Order</a>
+                    </div>
                 </div><!-- cart -->
                 <div class="checkout__info">
                     <form action="" method="post" class="checkout__info__form">
