@@ -61,9 +61,9 @@ template('detail', function () {
     detail();
 });
 
-route('', 'index');
-route('checkout.html', 'checkout');
-route('detail.html', 'detail');
+route('/funiro/', 'index');
+route('/funiro/checkout.html', 'checkout');
+route('/funiro/detail.html', 'detail');
 // route('/', 'index');
 // route('/checkout.html', 'checkout');
 // route('/detail.html', 'detail');
