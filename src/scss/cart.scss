@@ -67,6 +67,10 @@
         & .account__cart {
             display: none;
         }
+
+        .checkout &{
+            display: flex;
+        }
     }
 
     &__item {

@@ -1195,6 +1195,12 @@ body._touch .account__cart.has-dropdown .account__cart__wrapper.active {
   display: none;
 }
 
+.checkout .cart__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .cart__item {
   width: 100%;
   display: -ms-grid;
