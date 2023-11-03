@@ -1,16 +1,17 @@
 .checkout {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 3rem;
+    gap: 2.5rem;
     padding: 8.75rem 0 5rem 0;
 
     .cart {
         align-self: flex-start;
     }
+
     
     @media screen and (max-width: $max-width) {
         padding: calc(2.5rem * 3 + 40px) 0 min(5rem, 5vh) 0;
-        gap: min(3rem, 3vw);
+        gap: min(2.5rem, 2.5vw);
     }
 
     @media screen and (max-width: 1200px) {

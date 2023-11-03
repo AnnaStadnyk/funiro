@@ -40,13 +40,11 @@
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        font-weight: 500;
-        line-height: 1.5;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
     }
-
+    
     &__label {
         min-width: 48px;
         min-height: 48px;
@@ -55,6 +53,9 @@
         align-items: center;
         border-radius: 50%;
         color: $white;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
 
         &-sale {
             background-color: $red-1;
@@ -72,7 +73,7 @@
 
         display: grid;
         grid-template-columns: repeat(2, auto);
-        gap: 0.25rem;
+        column-gap: 0.25rem;
 
         h3 {
             grid-column: span 2;
@@ -88,8 +89,8 @@
 
 
         &__price {
-            display: flex;
-            align-items: center;
+            // display: flex;
+            align-self: baseline;
             font-size: 1.25rem;
             color: $gray-1;
             font-weight: 600;
@@ -101,8 +102,9 @@
         }
 
         &__price-old {
-            display: flex;
-            align-items: center;
+            // display: flex;
+            font-size: 1rem;
+            align-self: baseline;
             color: $gray-7;
             line-height: 1.5;
             text-decoration: line-through;

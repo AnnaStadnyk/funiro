@@ -39,6 +39,8 @@
 }
 
 .cart {
+    font-size: 1rem;
+    line-height: 1.2;
     .account__cart.has-dropdown & {
         max-height: 420px;
         overflow-y: auto;
@@ -99,7 +101,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 0.5rem;
-            width: 100%;
+            // width: 100%;
 
             .btn {
                 min-height: unset;
@@ -111,6 +113,7 @@
             span {
                 width: 1.1rem;
                 text-align: center;
+
             }
         }
     }
@@ -122,7 +125,9 @@
         span {
             font-weight: bold;
         }
+
     }
+    
 
     &__buttons {
         display: none;
@@ -138,5 +143,11 @@
         &.active {
             display: flex;
         }
+    }
+
+
+    .cart__header, .cart__total{
+        font-size: 1.125rem;
+        line-height: 1.5;
     }
 }

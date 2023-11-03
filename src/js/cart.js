@@ -1,18 +1,26 @@
 import { listCart, checkCart } from "./checkCart.js";
-import { products } from "./products.js";
+import { getProducts } from "./products.js";
 checkCart();
 
-export function addCart() {
-    let id = Number(this.closest('.product__item').getAttribute('data-pid'));
-    let product = products.find(p => p.id === id);
-    let cardProduct = listCart.find(p => p.id === id);
+export async function addCart(ID, n) {
+
+    // let ID = Number(this.closest('.product__item').getAttribute('data-pid'));
+    let products = await getProducts();
+    let product = products.find(p => p.id === ID);
+    let cardProduct = listCart.find(p => p.id === ID);
     if (!cardProduct) {
         listCart.push(product);
-        listCart[listCart.length - 1].quaintity = 1;
+        if (n < product.inStore) {
+            listCart[listCart.length - 1].quaintity = n;
+        } else {
+            listCart[listCart.length - 1].quaintity = product.inStore;
+        }
     }
     else {
-        if (cardProduct.quaintity < cardProduct.inStore) {
-            cardProduct.quaintity++;
+        if (cardProduct.quaintity + n < cardProduct.inStore) {
+            cardProduct.quaintity += n;
+        } else {
+            cardProduct.quaintity = cardProduct.inStore;
         }
     }
     addProductToCartHtml();
@@ -22,7 +30,7 @@ export function addCart() {
     document.cookie = 'FuniroListCart=' + JSON.stringify(listCart) + '; ' + timeSave + '; ' + 'path=/'
 }
 
-function updateCart() {
+export function updateCart() {
     let id = Number(this.closest('.cart__item').getAttribute('data-pid'));
     let product = listCart.find(p => p.id === id);
 
@@ -64,9 +72,9 @@ export function addProductToCartHtml() {
             newProduct.classList.add('cart__item');
             newProduct.setAttribute('data-pid', item.id);
             let productHtml =
-                `<a href="${item.url}" class="cart__item__img"><img src="img/products/${item.img}" alt="${item.title}"></a>
+                `<a href="/detail.html?id=${item.id}" class="cart__item__img"><img src="img/products/${item.img}" alt="${item.title}"></a>
                     <div class="cart__item__info">
-                        <a href="${item.url}" class="cart__item__title">${item.title}</a>
+                        <a href="/detail.html?id=${item.id}" class="cart__item__title">${item.title}</a>
                         <div class="cart__info__price">
                             <span>${Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumSignificantDigits: 3 }).format(item.priceSum)}</span> x 1
                         </div>

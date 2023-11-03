@@ -38,7 +38,7 @@
 ._icon-cart:before {
   content: "\e902";
 }
-._icon-favorite:before {
+._icon-favourite:before {
   content: "\e903";
 }
 ._icon-locate:before {
@@ -64,17 +64,26 @@
   content: "\e916";
   color: #1877f2;
 }
+._icon-shopping-bag:before {
+  content: "\e90d";
+}
 ._icon-cc-visa:before {
   content: "\e909";
 }
 ._icon-cc-mastercard:before {
   content: "\e912";
 }
+._icon-spinner2:before {
+  content: "\e97b";
+}
 ._icon-eye:before {
   content: "\e9ce";
 }
 ._icon-eye-blocked:before {
   content: "\e9d1";
+}
+._icon-star-full:before {
+  content: "\e9d9";
 }
 ._icon-google:before {
   content: "\ea88";

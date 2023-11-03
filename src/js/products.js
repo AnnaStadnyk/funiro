@@ -1,5 +1,5 @@
 import { addCart } from "./cart.js";
-export let products;
+let products;
 // let cardLimit;
 const cardIncrease = 4;
 // const pageCount = Math.ceil(cardLimit / cardIncrease);
@@ -19,7 +19,8 @@ export function getPageCount() {
     return pageCount;
 }
 
-async function getProducts() {
+
+export async function getProducts() {
     const response = await fetch('files/product.json');
     if (response.ok == true)
         return await response.json();
@@ -45,7 +46,7 @@ function addProductsToHtml(products) {
             newProduct.setAttribute('data-pid', item.id);
             let productHtml = '';
 
-            productHtml += `<a href="${item.url}" class="product__img">
+            productHtml += `<a href="/detail.html?id=${item.id}" class="product__img">
                 <img src="img/products/${item.img}" alt=${item.title}>
                 </a>`;
 
@@ -58,8 +59,8 @@ function addProductsToHtml(products) {
             }
 
             productHtml += `<div class="product__info">
-                <a href="" class="card-title">${item.title}</a>
-                <p>${item.description}</p>
+                <a href="/detail.html?id=${item.id}" class="card-title">${item.title}</a>
+                <p class="subtitle">${item.description}</p>
                 <div class="product__info__price">
                     <div class="product__info__price-sum">${Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumSignificantDigits: 3 }).format(item.priceSum)}</div>
                 </div>`;
@@ -75,14 +76,23 @@ function addProductsToHtml(products) {
             productHtml += `<div class="product__buy">
                 <button class="product__buy__btn btn-white">Add to cart</button>
                 <div class="product__buy__links">
-                    <a href="${item.url}"><span class="_icon-share"></span><span>Share</span></a>
-                    <a href="${item.url}"><span class="_icon-favorite"></span><span>Like</span></a>
+                    <a href=""><span class="_icon-share"></span><span>Share</span></a>
+                    <a href=""><span class="_icon-favourite"></span><span>Like</span></a>
                 </div>
             </div>`;
 
             newProduct.innerHTML = productHtml;
             productItems.appendChild(newProduct);
-            newProduct.querySelector('.product__buy__btn').addEventListener('click', addCart);
+            // newProduct.querySelector('.product__buy__btn').addEventListener('click', addCart);
+            newProduct.querySelector('.product__buy__btn').addEventListener('click', () => { addCart(item.id, 1) });
         })
+    }
+}
+
+export const getInStore = async (ID) => {
+    products = await getProducts();
+    let product = products.find(p => p.id === ID);
+    if (product !== undefined){
+        return product.inStore;
     }
 }

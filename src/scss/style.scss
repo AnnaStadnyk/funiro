@@ -3,7 +3,7 @@
 @import "icons";
 
 
-$font-size: 16px;
+$font-size: 18px;
 $min-width: 320px;
 $max-wrapper-width: 1240px;
 $max-width: 1440px;
@@ -28,7 +28,9 @@ $gap-1: 1rem;
 
 @mixin img_bg_wrapper($padding-bottom) {
     position: relative;
-    padding-bottom: min($padding-bottom, 75vh);
+    // padding-bottom: $padding-bottom;
+    // padding-bottom: min($padding-bottom, 75vh);
+    padding-bottom: min($padding-bottom, 75vmin);
     // padding-bottom: 56.25%; /* 16:9 */
     // padding-bottom: 75%; /* 4:3 */
     height: 0;
@@ -36,6 +38,7 @@ $gap-1: 1rem;
 }
 
 @mixin button($bc, $c) {
+    font-size: 1rem;
     line-height: 1.5;
     font-weight: 600;
     min-height: 48px;
@@ -68,6 +71,7 @@ $gap-1: 1rem;
     @include button($white, $orange-1);
     @include button-hover($orange-1, $white);
     padding: 12px calc($p * 1rem);
+    height: 48px;
 
     @media screen and (max-width: $max-width) {
         padding: 12px min(calc($p * 1rem), calc($p * 1vw));
@@ -133,14 +137,31 @@ a {
     }
 }
 
+        a.underline {
+            color: $orange-1;
+
+            @media screen and (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:active {
+                text-decoration: underline;
+            }
+        }
+
 body {
     font-family: "Gilroy";
-    font-size: $font-size;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.5;
     color: $gray-2;
     overflow-x: hidden;
+    @media screen and (max-width: $max-width) {
+        font-size: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
+    }
 
     &.lock {
         overflow: hidden;
@@ -151,9 +172,10 @@ h1 {
     font-size: 3.5rem;
     color: $gray-1;
     font-weight: 700;
+    line-height: 1.2;
 
     &:not(:last-child) {
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
 
     @media screen and (max-width: $max-width) {
@@ -166,9 +188,10 @@ h2 {
     color: $gray-1;
     font-weight: 700;
     text-align: center;
+    line-height: 1.2;
 
     &:not(:last-child) {
-        margin-bottom: 2rem;
+        margin-bottom: 2em;
     }
 
     @media screen and (max-width: $max-width) {
@@ -181,10 +204,11 @@ h3 {
     font-size: 1.75rem;
     color: $black;
     font-weight: 600;
+    line-height: 1.2;
     // transition: all 0.3s ease;
 
     &:not(:last-child) {
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.25em;
     }
 
     // margin-bottom: 0.66em;
@@ -197,6 +221,7 @@ h4 {
     font-size: 1.5rem;
     color: $black;
     font-weight: 700;
+    line-height: 1.2;
 
     // margin-bottom: 0.66em;
     @media screen and (max-width: $max-width) {
@@ -207,7 +232,7 @@ h4 {
 h5 {
     font-size: 1.2rem;
     color: $gray-1;
-    line-height: 1.5;
+    // line-height: 1.5;
     margin-bottom: 2px;
     font-weight: 600;
 
@@ -217,7 +242,7 @@ h5 {
     }
 }
 
-p {
+p.subtitle {
     font-size: 1rem;
     color: $gray-3;
     line-height: 1.5;
@@ -235,6 +260,7 @@ p {
 
 ._icon {
     font-size: 1.5rem;
+    line-height: 1.2;
     // color: inherit;
     @extend %_icon;
 }
@@ -254,6 +280,8 @@ abbr {
 
 .input-field,
 .select {
+    font-size: 1rem;
+    line-height: 1.2;
     padding: 0.75rem;
     color: $gray-6;
     background-color: $gray-5;
@@ -385,7 +413,7 @@ input[type=checkbox] {
         border-right: 2px solid $orange-1;
         transform: rotate(45deg);
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 6px;
         align-self: flex-start;
     }
@@ -393,7 +421,9 @@ input[type=checkbox] {
 
 
 // SWIPER STYLE BEGIN
-
+.swiper-slide{
+    height: 100%;
+}
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
@@ -513,7 +543,8 @@ input[type=checkbox] {
     .arrows-left {
         transform: translateX(-50%);
 
-        @media screen and (any-hover: none) {
+        // @media screen and (any-hover: none) {
+        @media screen and (max-width: 1300px) {
             transform: translateX(12px);
         }
 
@@ -524,7 +555,8 @@ input[type=checkbox] {
     .arrows-right {
         transform: translateX(50%);
 
-        @media screen and (any-hover: none) {
+        // @media screen and (any-hover: none) {
+            @media screen and (max-width: 1300px) {
             transform: translateX(-12px);
         }
 
@@ -558,3 +590,5 @@ input[type=checkbox] {
 @import "checkout";
 
 @import "loginform";
+
+@import "detail";

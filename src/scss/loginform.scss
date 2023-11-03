@@ -81,19 +81,6 @@
             text-align: center;
         }
 
-        a {
-            color: $orange-1;
-
-            @media screen and (any-hover: hover) {
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            &:active {
-                text-decoration: underline;
-            }
-        }
     }
 
     &.active {
