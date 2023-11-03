@@ -61,11 +61,12 @@ template('detail', function () {
     detail();
 });
 
-// route('/dist/index.html', 'index');
-// route('/dist/checkout.html', 'checkout');
-route('/', 'index');
-route('/checkout.html', 'checkout');
-route('/detail.html', 'detail');
+route('', 'index');
+route('checkout.html', 'checkout');
+route('detail.html', 'detail');
+// route('/', 'index');
+// route('/checkout.html', 'checkout');
+// route('/detail.html', 'detail');
 
 function resolveRoute(route) {
     try {
