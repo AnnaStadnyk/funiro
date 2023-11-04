@@ -62,9 +62,11 @@ template('detail', function () {
 });
 
 route('/funiro/', 'index');
+route('/funiro/index.html', 'index');
 route('/funiro/checkout.html', 'checkout');
 route('/funiro/detail.html', 'detail');
 // route('/', 'index');
+// route('/index.html', 'index');
 // route('/checkout.html', 'checkout');
 // route('/detail.html', 'detail');
 
@@ -459,75 +461,6 @@ function index() {
         handleButtonStatus();
     })
 
-
-    // Login Form
-
-    // let formContainer = document.querySelector('.login__form__wrapper');
-    // let passwordField = document.querySelectorAll('input[type=password]');
-    // formContainer.addEventListener('click', (e) => {
-    //     passwordField.forEach(item => {
-    //         let icon = item.nextElementSibling;
-    //         if (item !== e.target) {
-    //             icon.classList.remove('active');
-    //             icon.classList.replace('_icon-eye', '_icon-eye-blocked');
-    //             item.type = "password";
-    //             item.classList.remove('focus');
-    //         }
-    //     })
-    // })
-    // passwordField.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         let icon = item.nextElementSibling;
-    //         if (item === document.activeElement) {
-    //             icon.classList.add('active');
-    //             item.classList.add('focus');
-    //         }
-    //     })
-    // })
-    // let icon = document.querySelectorAll('.login__form ._icon');
-    // icon.forEach(item => {
-    //     let passwordField = item.previousElementSibling;
-    //     item.addEventListener('click', (e) => {
-    //         if (passwordField.type === 'password') {
-    //             passwordField.type = "text";
-    //             item.classList.replace('_icon-eye-blocked', '_icon-eye');
-    //         }
-    //         else {
-    //             passwordField.type = "password";
-    //             item.classList.replace('_icon-eye', '_icon-eye-blocked');
-    //         }
-    //         e.stopPropagation();
-    //     })
-    // })
-
-    // let signinForm = document.querySelector('.signin__form');
-    // let signupForm = document.querySelector('.signup__form');
-    // let accountEnterBtn = document.querySelector('.account__enter');
-
-    // accountEnterBtn.addEventListener('click', (e) => {
-    //     document.querySelector('body').classList.add('lock');
-    //     signinForm.classList.add('active');
-    //     formContainer.classList.add('active');
-    //     e.preventDefault();
-    // })
-
-    // document.querySelectorAll('.login__form__link').forEach(item => {
-    //     item.addEventListener('click', (e) => {
-    //         signinForm.classList.toggle('active');
-    //         signupForm.classList.toggle('active');
-    //         e.preventDefault();
-    //     })
-    // })
-
-    // document.querySelectorAll('.login__form__close').forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         signinForm.classList.remove('active');
-    //         signupForm.classList.remove('active');
-    //         formContainer.classList.remove('active');
-    //         document.querySelector('body').classList.remove('lock');
-    //     })
-    //     // item.addEventListener('click', closeForm);
-    // })
 }
 
 import { addProductToCheckoutHtml, updateCheckoutSum } from "./checkout.js";
@@ -550,7 +483,11 @@ function checkout() {
     customSelect();
 }
 
+import {addDetail} from "./detail.js";
+
 function detail() {
+
+    addDetail();
 
     let tabs = document.querySelectorAll('.detail__description__tab');
     tabs.forEach(item => {
@@ -650,5 +587,7 @@ function detail() {
             }
         });
     })
+
+    
 }
 

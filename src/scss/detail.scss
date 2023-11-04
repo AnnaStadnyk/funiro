@@ -320,7 +320,17 @@
             justify-content: space-evenly;
         }
 
-        &__all,
+        &__all{
+            display: none;
+            flex-direction: column;
+            gap: 0.25rem;
+            justify-content: flex-start;
+            align-items: center;
+            &.active{
+                display: flex;
+            }
+        }
+
         &__progress {
             display: flex;
             flex-direction: column;

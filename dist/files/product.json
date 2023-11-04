@@ -17,9 +17,65 @@
         "description": "Stylish cafe chair",
         "priceSum": 2450000,
         "priceOldSum": 3500000,
-        "inStore": 5
+        "inStore": 5,
+        "images": [
+            {
+                "img": "img-1.jpg"
+            },
+            {
+                "img": "img-2.jpg"
+            },
+            {
+                "img": "img-3.jpg"
+            },
+            {
+                "img": "img-4.jpg"
+            }
+        ],
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi nesciunt possimus nihil praesentium atque voluptates sapiente id nisi ut mollitia, quibusdam magni sint sed exercitationem enim in! Dolor, ipsa quia.",
+        "characteristics": [
+            {
+                "title": "Lorem",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, possimus!"
+            },
+            {
+                "title": "Ipsum",
+                "description": "Lorem ipsum dolor sit amet consectetur"
+            },
+            {
+                "title": " Dolor Amet",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt optio, placeat laboriosam perspiciatis vitae!"
+            }
+        ],
+        "review": 100,
+        "rating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 4,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates, labore eveniet delectus quae sunt porro, est similique. Vitae, temporibus?",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 2,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 3,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 3,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 5,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "datetime": "2023-10-29"
+            }
+        ]
     },
-
     {
         "id": 1002,
         "url": "#",
@@ -34,9 +90,64 @@
         "description": "Stylish cafe chair",
         "priceSum": 2450000,
         "priceOldSum": 3500000,
-        "inStore": 10
+        "inStore": 10,        "images": [
+            {
+                "img": "img-1.jpg"
+            },
+            {
+                "img": "img-2.jpg"
+            },
+            {
+                "img": "img-3.jpg"
+            },
+            {
+                "img": "img-4.jpg"
+            }
+        ],
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi nesciunt possimus nihil praesentium atque voluptates sapiente id nisi ut mollitia, quibusdam magni sint sed exercitationem enim in! Dolor, ipsa quia.",
+        "characteristics": [
+            {
+                "title": "Lorem",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, possimus!"
+            },
+            {
+                "title": "Ipsum",
+                "description": "Lorem ipsum dolor sit amet consectetur"
+            },
+            {
+                "title": " Dolor Amet",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt optio, placeat laboriosam perspiciatis vitae!"
+            }
+        ],
+        "review": 100,
+        "rating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 4,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates, labore eveniet delectus quae sunt porro, est similique. Vitae, temporibus?",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 2,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 3,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 3,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 5,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "datetime": "2023-10-29"
+            }
+        ]
     },
-
     {
         "id": 1003,
         "url": "#",
@@ -51,9 +162,65 @@
         "description": "Luxury big sofa",
         "priceSum": 7000000,
         "priceOldSum": 14000000,
-        "inStore": 5
+        "inStore": 5,
+        "images": [
+            {
+                "img": "img-1.jpg"
+            },
+            {
+                "img": "img-2.jpg"
+            },
+            {
+                "img": "img-3.jpg"
+            },
+            {
+                "img": "img-4.jpg"
+            }
+        ],
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi nesciunt possimus nihil praesentium atque voluptates sapiente id nisi ut mollitia, quibusdam magni sint sed exercitationem enim in! Dolor, ipsa quia.",
+        "characteristics": [
+            {
+                "title": "Lorem",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, possimus!"
+            },
+            {
+                "title": "Ipsum",
+                "description": "Lorem ipsum dolor sit amet consectetur"
+            },
+            {
+                "title": " Dolor Amet",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt optio, placeat laboriosam perspiciatis vitae!"
+            }
+        ],
+        "review": 100,
+        "rating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 4,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates, labore eveniet delectus quae sunt porro, est similique. Vitae, temporibus?",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 2,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 3,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 3,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 5,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "datetime": "2023-10-29"
+            }
+        ]
     },
-
     {
         "id": 1004,
         "url": "#",
@@ -63,9 +230,65 @@
         "description": "Minimalist fan",
         "priceSum": 500000,
         "priceOldSum": null,
-        "inStore": 10
+        "inStore": 10,
+        "images": [
+            {
+                "img": "img-1.jpg"
+            },
+            {
+                "img": "img-2.jpg"
+            },
+            {
+                "img": "img-3.jpg"
+            },
+            {
+                "img": "img-4.jpg"
+            }
+        ],
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi nesciunt possimus nihil praesentium atque voluptates sapiente id nisi ut mollitia, quibusdam magni sint sed exercitationem enim in! Dolor, ipsa quia.",
+        "characteristics": [
+            {
+                "title": "Lorem",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, possimus!"
+            },
+            {
+                "title": "Ipsum",
+                "description": "Lorem ipsum dolor sit amet consectetur"
+            },
+            {
+                "title": " Dolor Amet",
+                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt optio, placeat laboriosam perspiciatis vitae!"
+            }
+        ],
+        "review": 100,
+        "rating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 4,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates, labore eveniet delectus quae sunt porro, est similique. Vitae, temporibus?",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 2,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 3,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veritatis culpa necessitatibus dolor velit quia explicabo adipisci, iste eius voluptates",
+                "datetime": "2023-10-29"
+            },
+            {
+                "id": 3,
+                "user": "Full Name",
+                "purchase": true,
+                "rating": 5,
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "datetime": "2023-10-29"
+            }
+        ]
     },
-
     {
         "id": 1005,
         "url": "#",
@@ -77,7 +300,6 @@
         "priceOldSum": null,
         "inStore": 5
     },
-
     {
         "id": 1006,
         "url": "#",
@@ -98,7 +320,6 @@
         "priceOldSum": 200000,
         "inStore": 10
     },
-
     {
         "id": 1007,
         "url": "#",
@@ -115,7 +336,6 @@
         "priceOldSum": 14000000,
         "inStore": 5
     },
-
     {
         "id": 1008,
         "url": "#",
@@ -132,7 +352,6 @@
         "priceOldSum": null,
         "inStore": 10
     },
-
     {
         "id": 1009,
         "url": "#",
@@ -144,7 +363,6 @@
         "priceOldSum": null,
         "inStore": 5
     },
-
     {
         "id": 1010,
         "url": "#",
@@ -165,7 +383,6 @@
         "priceOldSum": 200000,
         "inStore": 10
     },
-
     {
         "id": 1011,
         "url": "#",
@@ -182,7 +399,6 @@
         "priceOldSum": 14000000,
         "inStore": 8
     },
-
     {
         "id": 1012,
         "url": "#",
