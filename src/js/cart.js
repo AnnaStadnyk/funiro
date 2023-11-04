@@ -72,9 +72,9 @@ export function addProductToCartHtml() {
             newProduct.classList.add('cart__item');
             newProduct.setAttribute('data-pid', item.id);
             let productHtml =
-                `<a href="/detail.html?id=${item.id}" class="cart__item__img"><img src="img/products/${item.img}" alt="${item.title}"></a>
+                `<a href="detail.html?id=${item.id}" class="cart__item__img"><img src="img/products/${item.img}" alt="${item.title}"></a>
                     <div class="cart__item__info">
-                        <a href="/detail.html?id=${item.id}" class="cart__item__title">${item.title}</a>
+                        <a href="detail.html?id=${item.id}" class="cart__item__title">${item.title}</a>
                         <div class="cart__info__price">
                             <span>${Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumSignificantDigits: 3 }).format(item.priceSum)}</span> x 1
                         </div>

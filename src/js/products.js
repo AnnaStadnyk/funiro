@@ -46,7 +46,7 @@ function addProductsToHtml(products) {
             newProduct.setAttribute('data-pid', item.id);
             let productHtml = '';
 
-            productHtml += `<a href="/detail.html?id=${item.id}" class="product__img">
+            productHtml += `<a href="detail.html?id=${item.id}" class="product__img">
                 <img src="img/products/${item.img}" alt=${item.title}>
                 </a>`;
 
@@ -59,7 +59,7 @@ function addProductsToHtml(products) {
             }
 
             productHtml += `<div class="product__info">
-                <a href="/detail.html?id=${item.id}" class="card-title">${item.title}</a>
+                <a href="detail.html?id=${item.id}" class="card-title">${item.title}</a>
                 <p class="subtitle">${item.description}</p>
                 <div class="product__info__price">
                     <div class="product__info__price-sum">${Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumSignificantDigits: 3 }).format(item.priceSum)}</div>
