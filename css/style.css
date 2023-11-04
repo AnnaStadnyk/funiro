@@ -2858,7 +2858,27 @@ body._mouse .tips__swiper__item:hover {
           justify-content: space-evenly;
 }
 
-.detail__review__all,
+.detail__review__all {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.detail__review__all.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .detail__review__progress {
   display: -webkit-box;
   display: -ms-flexbox;
