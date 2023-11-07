@@ -4,4 +4,4 @@ Digital Store
 - Product page;
 - Shopping Cart;
 - Registration/authorization form;
-- Checkout form;
+- Checkout form
