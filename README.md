@@ -1,3 +1,5 @@
+https://annastadnyk.github.io/funiro/
+
 # funiro
 Digital Store
 - Home page;
